@@ -1,4 +1,6 @@
 import { Component, Input } from "@angular/core";
+import { type Task } from "./task.model";
+
 
 @Component({
     selector: 'app-task',
@@ -8,6 +10,6 @@ import { Component, Input } from "@angular/core";
 })
 export class TaskComponent {
 
-    @Input() taskUserName?: string;
+    @Input({required: true}) taskInfo!: Task;
 
 }

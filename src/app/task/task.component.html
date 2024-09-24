@@ -1,11 +1,12 @@
-<article>
+<app-card>
+    <article>
+        <h2>{{taskInfo.title}}</h2>
+        <time>{{taskInfo.dueDate | date:'fullDate' }}</time>
+        <p>{{taskInfo.summary}}</p>
+        <p class="actions">
+            <button (click)="onCompleteTask()">Complete</button>
+        </p>
+    </article>
+</app-card>
 
-
-    <h2>{{taskInfo.title}}</h2>
-    <time>{{taskInfo.dueDate}}</time>
-    <p>{{taskInfo.summary}}</p>
-    <p class="actions">
-        <button (click)="onCompleteTask()">Complete</button>
-    </p>
-</article>
 

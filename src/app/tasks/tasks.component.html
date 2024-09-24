@@ -7,7 +7,7 @@
     </header>
 
     @if(isAddingTask){
-        <app-new-task (closeComponent)="onClosingNewTask()" (addTask)="onAddTask($event)"></app-new-task>
+        <app-new-task [userId]="userId" (closeComponent)="onClosingNewTask()"></app-new-task>
     }
     
 

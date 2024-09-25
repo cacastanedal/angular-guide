@@ -1,27 +1,31 @@
-# MyApp
+# Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+## Components
+A way provided by Angular to build a modular user interface.
+It is also a custom html template that can be use in other components, creating a tree like structure.
+Components can have inputs, which are set at the component usage, and outputs, that can be trasmited to other components.
 
-## Development server
+## Templates 
+Are the actual html that is going to be rendered, angular provides funtionality to bind data to templates
+- {{String interpolation}}
+- [Property biding]
+- (Event biding)
+- [(ngModel)] -> 2 way binding for form input fields.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+@if & @for template syntax are available from angular 17, *ngIf & *ngFor are used for older versions.
 
-## Code scaffolding
+To add css class is used a [class] binding sintex
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ngSumit is used in template to prevent default behavior on submit button in a form, and handle the submition in the client.
 
-## Build
+'<ng-content>' is a template anotation to define a rendering place inside the template definition for components wraped under the main template component tag
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Signals
+Angular is able to listen for changes in components data and render it when its needed, with it zones implementation
+there is a new way, in which a signal is defined, and other components can subscribe to it and be updated when the signal changes, signals are available from angular 16.
 
-## Running unit tests
+## Pipes
+Are use also in the templates to format data in the template directly
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Services
+Can be used to implement logic and also to be injected in components through dependency injection.
